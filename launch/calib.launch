@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+<!--     <remap from="/talker" to="/re_talker" /> -->
+
+    <node pkg="rosbag" type="play" name="rosbag_play" args="--clock -r 1 /media/llz/Extreme\ SSD/KITTI/bag包/2011_09_30_0018.bag"/>
+
+    <!--- Sim Time -->
+    <param name="/use_sim_time" value="true" />
+
+    <!--- -->
+    <node pkg="save_point_image" type="SavePointAndImage" name="SavePointAndImage_node" output="screen"/>
+
+<!--     <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
+
+<!--     <include file="$(find rslidar_pointcloud)/launch/rs_lidar_16.launch"> -->
+
+
+</launch>
